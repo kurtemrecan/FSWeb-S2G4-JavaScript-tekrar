@@ -160,7 +160,7 @@ for (let sayi of sayilar.toString){
 }
 
 /* kodlar buraya */
-
+//canım hocam gökhan
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
 function sa() {
