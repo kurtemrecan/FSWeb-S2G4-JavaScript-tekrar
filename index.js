@@ -50,9 +50,14 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(yariCap) {
+
+const cevre = 2 * pi * yariCap;
+return cevre;
 }
+console.log(CemberinCevresi(5));
+
+
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -64,8 +69,9 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yariCap,pi) {
+  const alan = pi * Math.pow(yariCap,2); 
+  return alan;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -99,25 +105,58 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+for (let i = 0; i < sayilar.length; i++){
+  if(sayilar[i] < enkucuk){
+    enkucuk = sayilar[i];
+  } if (sayilar[i] > enbuyuk){
+    enbuyuk = sayilar[i];
+  }
+}
 
 // 3b çözümü:
+ucetambolunenler = [];
+sayilar.forEach((sayi) => {
+  if(sayi % 3 === 0){
+    ucetambolunenler.push(sayi);
+  }
+});
 
-/* kodlar buraya */
 
 // 3c çözümü:
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam,sayi) => {
+  return toplam + sayi;
+},0);
 
-/* kodlar buraya */
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = [];
+sayilar.filter((sayi) => {
+  if(sayi[i]<500){
+    besyuzdenkucuksayilar.push(sayi);
+    }
+  });
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = [];
+besyuzdenkucuksayilar.sort((a,b)=> a-b);
+siralisayilar.push(besyuzdenkucuksayilar);
+
 
 // 3f çözümü
+tekraredensayilar = [];
+const tekrarSayisi = {};
+
+for (let sayi of sayilar.toString){
+  if(tekrarSayisi[sayi] === undefined){
+    tekrarSayisi[sayi] = 1
+  } else {
+  }
+   for(let sayi of sayilar){
+    tekraredensayilar.push(`${sayı} sayısı ${tekrarSayisi} kere tekrar edilmiştir`)
+   }
+}
 
 /* kodlar buraya */
 
