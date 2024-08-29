@@ -152,6 +152,7 @@ for (let sayi of sayilar.toString){
   if(tekrarSayisi[sayi] === undefined){
     tekrarSayisi[sayi] = 1
   } else {
+    tekrarSayisi[sayi]++
   }
    for(let sayi of sayilar){
     tekraredensayilar.push(`${sayı} sayısı ${tekrarSayisi} kere tekrar edilmiştir`)
