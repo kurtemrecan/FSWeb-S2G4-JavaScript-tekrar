@@ -101,7 +101,7 @@ let ucetambolunenler,
   ucebolunenlerintoplami,
   besyuzdenkucuksayilar,
   siralisayilar,
-  tekraredensayilar;
+  tekraredensayilar = [];
 
 // 3a çözümü
 //dizilerde en büyük ve en küçük sayıyı bulmak istiyorsak öncelikle bunları dizinin ilk elemanı başlangıç değeeri olarak 0 yaparız ve i'i 1 den başlatırız!!
@@ -145,23 +145,26 @@ sayilar.filter((sayi) => {
 siralisayilar = besyuzdenkucuksayilar.slice().sort((a, b) => a - b);
 //siralisayilar.push(besyuzdenkucuksayilar);
 
+//console.log(siralisayilar);
 
 
 // 3f çözümü
-/*
-tekraredensayilar = [];
-let tekrarSayisi = {};
 
-for (let i = 0; sayilar.length; i++) {
-  if (tekrarSayisi[i] === undefined) {
-    tekrarSayisi[i] = 1
-  } else {
-    tekrarSayisi[i]++
-  }
-  for (let i of sayilar) {
-    tekraredensayilar.push(`${i} sayısı ${tekrarSayisi} kere tekrar edilmiştir`)
-  }
+const tekrarSayisi = {};
+
+for (const sayi of sayilar) {
+    if (tekrarSayisi[sayi]) {
+        tekrarSayisi[sayi]++;
+    } else {
+        tekrarSayisi[sayi] = 1;
+    }
 }
+
+for (const sayi in tekrarSayisi) {
+    if (tekrarSayisi[sayi] > 1) {
+        tekraredensayilar.push(`${sayi} sayısı ${tekrarSayisi[sayi]} tekrar edilmiştir`);
+    }
+};console.log(tekraredensayilar);
 
 /* kodlar buraya */
 //canım hocam gökhan
